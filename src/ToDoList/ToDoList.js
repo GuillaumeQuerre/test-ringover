@@ -1,8 +1,15 @@
 import { memo } from "react";
-function ToDoList () {
+import { FlatList } from "react-native";
+import Element from "./Element"
+function ToDoList ({list}) {
     return (
-        <>
-        </>
+        <FlatList>
+            {list.map(element, id => {
+                return <Element element={element}/>
+            })
+            }
+        </FlatList>
+
     )
 
 }
